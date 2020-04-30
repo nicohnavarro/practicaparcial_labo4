@@ -5,7 +5,7 @@ const path = require('path');
 app.use(express.static(__dirname + '/angularapp'));
 app.listen(process.env.PORT || 8080);
 
-aoo.get('/*', function(treq, res) {
+aoo.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname + '/angularapp/index.html'));
 });
 
