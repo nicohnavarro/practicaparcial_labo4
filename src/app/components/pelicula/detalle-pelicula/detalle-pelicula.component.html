@@ -1,0 +1,21 @@
+<div *ngIf="!peliculaParaMostrar">
+    <div class="alert alert-danger" role="alert">
+        Seleccione una Peli!
+    </div>
+</div>
+
+<div class="container">
+    <div class="card" *ngIf="peliculaParaMostrar" style="width: 18rem; margin-bottom:5%;  ">
+        <img class="card-img-top" [src]="peliculaParaMostrar.fotoPeli" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{peliculaParaMostrar.id}}</h5>
+            <p class="card-text">{{peliculaParaMostrar.nombre}}</p>
+            <p class="card-text">{{peliculaParaMostrar.tipo}}</p>
+            <p class="card-text">{{peliculaParaMostrar.fechaEstreno}}</p>
+            <p class="card-text">{{peliculaParaMostrar.cantidaPublico}}</p>
+
+            <!-- <a href="#" class="btn btn-danger">Borrar</a>
+            <a (click)="limpiarDetalle()" class="btn btn-info">Limpiar</a> -->
+        </div>
+    </div>
+</div>

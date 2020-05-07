@@ -6,13 +6,18 @@ import { PeliculaListadoComponent } from './components/pelicula/pelicula-listado
 import { ActorAltaComponent } from './components/actor/actor-alta/actor-alta.component';
 import { ActorListadoComponent } from './components/actor/actor-listado/actor-listado.component';
 import { TablaPeliculaComponent } from './components/pelicula/tabla-pelicula/tabla-pelicula.component';
+import { PaisesListadoComponent } from './components/pais/paises-listado/paises-listado.component';
+import { BienvenidoComponent } from './components/bienvenido/bienvenido.component';
 
 const routes: Routes = [
-  { path: '/busqueda', component: BusquedaComponent },
-  { path: '/pelicula/alta', component: PeliculaAltaComponent },
-  { path: '/actor/alta', component: ActorAltaComponent },
-  { path: '/actor/listado', component: ActorListadoComponent },
-  { path: '/pelicula/listado', component: PeliculaListadoComponent },
+  { path: '', component: BienvenidoComponent },
+  { path: 'bienvenido', component: BienvenidoComponent },
+  { path: 'busqueda', component: BusquedaComponent },
+  { path: 'pelicula/alta', component: PeliculaAltaComponent },
+  { path: 'actor/alta', component: ActorAltaComponent },
+  { path: 'actor/listado', component: ActorListadoComponent },
+  { path: 'pelicula/listado', component: PeliculaListadoComponent },
+  { path: 'paises/listado', component: PaisesListadoComponent }
 
 ];
 

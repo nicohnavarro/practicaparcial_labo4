@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TablaPeliculaComponent } from '../pelicula/tabla-pelicula/tabla-pelicula.component';
 
 @Component({
   selector: 'app-busqueda',

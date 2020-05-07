@@ -1,0 +1,26 @@
+<p>tabla-paises works!</p>
+<div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <!--                 
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Fecha Estreno</th>
+                <th scope="col">Cantidad Publico</th> -->
+                <th scope="col">Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pais of paises; index as i">
+                <th scope="row"></th>
+                <td>
+                    <img style="height:60px;width:100px;" [src]="pais.flag" alt=" ">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
