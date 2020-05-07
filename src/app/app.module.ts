@@ -15,6 +15,7 @@ import { TablaPaisesComponent } from './components/pais/tabla-paises/tabla-paise
 import { BienvenidoComponent } from './components/bienvenido/bienvenido.component';
 import { PaisesService } from './services/paises.service';
 import {HttpClientModule} from '@angular/common/http';
+import { DetallePaisComponent } from './components/pais/detalle-pais/detalle-pais.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {HttpClientModule} from '@angular/common/http';
     DetallePeliculaComponent,
     PaisesListadoComponent,
     TablaPaisesComponent,
-    BienvenidoComponent
+    BienvenidoComponent,
+    DetallePaisComponent
   ],
   imports: [
     BrowserModule,

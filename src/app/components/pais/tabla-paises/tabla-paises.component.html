@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let pais of paises; index as i">
+            <tr *ngFor="let pais of paises; index as i" (click)="mostrarDetalles(pais)">
                 <th scope="row"></th>
                 <td>
                     <img style="height:60px;width:100px;" [src]="pais.flag" alt=" ">

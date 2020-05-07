@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { PaisesService } from '../../../services/paises.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { PaisesService } from '../../../services/paises.service';
   styleUrls: ['./tabla-paises.component.css']
 })
 export class TablaPaisesComponent implements OnInit {
+   @Output() paisSeleccionado: EventEmitter<any> = new EventEmitter<any>();
   paises:[];
 
   constructor(private paisesServices:PaisesService) { }
@@ -32,5 +33,9 @@ export class TablaPaisesComponent implements OnInit {
           console.log(<any>error);
       }
   );
+  }
+
+  mostrarDetalles(pais:any){
+    this.paisSeleccionado.emit(pais);
   }
 }

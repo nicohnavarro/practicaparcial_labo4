@@ -1,0 +1,25 @@
+<p>detalle-pais works!</p>
+<div *ngIf="!paisParaMostrar">
+    <div class="alert alert-danger" role="alert">
+        Seleccione un pais!
+    </div>
+</div>
+
+<div class="container">
+    <div class="card" *ngIf="paisParaMostrar" style="width: 18rem; margin-bottom:5%;  ">
+        <img class="card-img-top" [src]="paisParaMostrar.flag" alt="Card image cap">
+        <div class="card-body">
+
+            <h5 class="card-title">Nombre: {{paisParaMostrar.name}}</h5>
+            <!-- <div *ngFor="let atributo of paisParaMostrar">
+                <p class="card-text">{{atributo}}</p>
+            </div> -->
+            <p class="card-text">Region: {{paisParaMostrar.region}}</p>
+            <p class="card-text">Poblacion: {{paisParaMostrar.population}}</p>
+            <p class="card-text">Subregion: {{paisParaMostrar.subregion}}</p>
+
+            <!-- <a href="#" class="btn btn-danger">Borrar</a>
+            <a (click)="limpiarDetalle()" class="btn btn-info">Limpiar</a> -->
+        </div>
+    </div>
+</div>
