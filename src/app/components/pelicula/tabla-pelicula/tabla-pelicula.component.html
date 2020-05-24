@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
 
     <table class="table">
         <thead>
@@ -13,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let pelicula of peliculas; index as i" (click)="mostrarDetalles(pelicula)">
+            <tr *ngFor="let pelicula of peliculas; index as i"(click)="mostrarDetalles(pelicula)">
                 <th scope="row" (click)="mostrarDetalles(pelicula)"></th>
                 <td>{{pelicula.id}}</td>
                 <td>{{pelicula.nombre}}</td>
@@ -25,5 +25,51 @@
                 </td>
             </tr>
         </tbody>
+    </table>
+</div> -->
+<div class="contenedor">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="tipo">
+            <th mat-header-cell *matHeaderCellDef> Tipo </th>
+            <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+        </ng-container>
+
+        <!-- fechaEstreno Column -->
+        <ng-container matColumnDef="fechaEstreno">
+            <th mat-header-cell *matHeaderCellDef> Fecha de Estreno </th>
+            <td mat-cell *matCellDef="let element"> {{element.fechaEstreno.toLocaleDateString()}} </td>
+        </ng-container>
+
+        <!-- cantidad Column -->
+        <ng-container matColumnDef="cantidaPublico">
+            <th mat-header-cell *matHeaderCellDef> Publico</th>
+            <td mat-cell *matCellDef="let element"> {{element.cantidaPublico}} </td>
+        </ng-container>
+
+        <!-- foto Column -->
+        <ng-container matColumnDef="foto">
+            <th mat-header-cell *matHeaderCellDef> Foto </th>
+            <td mat-cell *matCellDef="let element"> <img src={{element.fotoPeli}} alt=""></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="mostrarDetalles(row)"></tr>
     </table>
 </div>

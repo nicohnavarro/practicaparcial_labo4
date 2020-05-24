@@ -1,8 +1,38 @@
 img {
     width: 80px;
     height: 140px;
+    padding-top: 0.4rem;
 }
 
-tr:hover {
-    background-color: blue;
+table {
+    width: 80%;
+    padding: 2rem;
+    margin: 2rem auto;
+    /* overflow-y: auto; */
+}
+
+tr.mat-row:hover {
+    background-color: rgba(76, 76, 77, 0.335);
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.contenedor {
+    position: relative;
+    max-height: 60%;
+    overflow: auto;
+}
+
+.contenedor::-webkit-scrollbar {
+    width: 1em;
+}
+
+.contenedor::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
 }
