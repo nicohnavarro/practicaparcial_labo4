@@ -16,6 +16,10 @@ import { BienvenidoComponent } from './components/bienvenido/bienvenido.componen
 import { PaisesService } from './services/paises.service';
 import {HttpClientModule} from '@angular/common/http';
 import { DetallePaisComponent } from './components/pais/detalle-pais/detalle-pais.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+
 
 @NgModule({
   declarations: [
@@ -30,12 +34,15 @@ import { DetallePaisComponent } from './components/pais/detalle-pais/detalle-pai
     PaisesListadoComponent,
     TablaPaisesComponent,
     BienvenidoComponent,
-    DetallePaisComponent
+    DetallePaisComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [PaisesService],
   bootstrap: [AppComponent]
